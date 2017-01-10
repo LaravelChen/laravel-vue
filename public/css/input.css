@@ -1,0 +1,34 @@
+.form-group .form__input, .form-group .form__textarea {
+    margin-bottom: 0;
+}
+.form-group--error input, .form-group--error input:focus, .form-group--error input:hover, .form-group--error textarea {
+    border-color: #f79483;
+}
+.form__input, .form__textarea {
+    position: relative;
+    margin-bottom: 2rem;
+    font-family: Lato,sans-serif;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #374853;
+    line-height: 2.375rem;
+    min-height: 2.375rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 .8125rem;
+    width: 100%;
+    transition: border .1s ease;
+    box-sizing: border-box;
+}
+.form-group--error+.form-group__message {
+    display: block;
+    color: #f57f6c;
+}
+.form-group__message {
+    font-size: .75rem;
+    display: none;
+    margin-left: 14px;
+    margin-top: -1.8rem;
+    margin-bottom: .9375rem;
+}

@@ -13,11 +13,19 @@ use App\User;
 
 class UsersRepository
 {
+    /**
+     * @param $info
+     * @return static
+     */
     public function store($info)
     {
         return User::create($info);
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function ById($id)
     {
         return User::find($id);

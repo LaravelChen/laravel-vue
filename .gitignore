@@ -6,4 +6,4 @@
 Homestead.json
 Homestead.yaml
 .env
-/resources/assets/js/components/Comment.vue
+/resources/assets/js/components/Comment/Comment.vue

@@ -13,11 +13,19 @@ use App\Article;
 
 class ArticlesRepository
 {
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function Byid($id){
         return Article::find($id);
     }
 
+    /**
+     * @return mixed
+     */
     public function ByAll(){
-        return Article::all();
+        return Article::latest()->get();
     }
+
 }

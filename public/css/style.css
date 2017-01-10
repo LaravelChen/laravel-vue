@@ -1,3 +1,6 @@
+*{
+    font-family: Arial,'Hiragino Sans GB',冬青黑,'Microsoft YaHei',微软雅黑,SimSun,宋体,Helvetica,Tahoma,'Arial sans-serif';
+}
 a:hover{
     cursor: pointer;
 }
@@ -79,6 +82,9 @@ article .entry-content {
     color: #636b6f;
     font-family: Arial,'Hiragino Sans GB',冬青黑,'Microsoft YaHei',微软雅黑,SimSun,宋体,Helvetica,Tahoma,'Arial sans-serif';
 }
+.vote{
+    font-family: Arial,'Hiragino Sans GB',冬青黑,'Microsoft YaHei',微软雅黑,SimSun,宋体,Helvetica,Tahoma,'Arial sans-serif';
+}
 .comment-title{
     color: #268bd2;
     font-size: 16px;
@@ -109,6 +115,91 @@ textarea{
     color: #9d9d9d;
     padding-bottom: 0;
 }
+.edit-comment{
+    font-size: 14px;
+    color: #9d9d9d;
+    padding-left: 5px;
+}
 .media-bottom{
     border-bottom: 1px solid #ecf0f1;
+}
+.commenttotal{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.commenttotal-title{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.commenttotal-body{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.commenttotal-time{
+    font-size: 15px;
+    color: darkgray;
+}
+
+article{
+    border-top: none;
+}
+.love-flag{
+    position: absolute;
+    right: 10px;
+    top:30px;
+    font-size: 20px;
+}
+.love-ul{
+    position: absolute;
+    right: 0;
+    top:65px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #9d9d9d;
+}
+.love-ul li{
+    padding: 0;
+    background: #FAFAFA;
+}
+.love-ul li a:hover{
+    background: #FF7F50;
+    text-decoration: none;
+    color: #fff;
+}
+.love-ul li a{
+    display: block;
+    padding: 2px 45px;
+    font-size: 15px;
+    text-align: center;
+    color: #656c7a;
+}
+.notification{
+    background: #fff;
+}
+.notification h1{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0;
+}
+.notification h1 a{
+    font-size: 15px;
+}
+.notification-ul{
+    list-style: none;
+    padding-left: 0;
+}
+.notification-ul li:hover{
+    background: #f5f8fa;
+    cursor: pointer;
+}
+.notification-ul li:hover a{
+    text-decoration: none;
+}
+.notification-media{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.myform-group{
+    margin-bottom: 2em;
 }

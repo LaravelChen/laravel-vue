@@ -23,6 +23,10 @@
                 </ul>
 
                 <ul v-if="users.login" class="nav navbar-nav navbar-right">
+                    <li>
+                        <router-link to="/notification" tag="a" style="font-size:18px"><i class="fa fa-bell"><span
+                                style="color:#FF7F24;font-size:15px">{{notreadcount}}</span></i></router-link>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">
@@ -30,6 +34,15 @@
                             <img class="img-circle" width="40" v-bind:src="users.avatar">
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <router-link to="/commenttotal" tag="a">评论汇总</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/userlove" tag="a">我的收藏</router-link>
+                            </li>
+                            <li>
+                               <a href="/admin">管理后台</a>
+                            </li>
                             <li>
                                 <a href="/logout">
                                     退出登录
@@ -46,5 +59,26 @@
 <script>
     export default{
          props:['users'],
+         data(){
+             return {
+                 count:'',
+             }
+         },
+         computed:{
+            notreadcount(){
+                setInterval(() => {
+                         this.$http.get('api/notread').then((response)=>{
+                                 if(response.data!='0'){
+                                     this.count=response.data;
+                                 }else{
+                                      this.count='';
+                                 }
+                         });
+                }, 100);
+                return this.count;
+            },
+         },
     }
+
+
 </script>

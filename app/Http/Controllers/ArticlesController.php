@@ -15,7 +15,7 @@ class ArticlesController extends Controller
      */
     public function __construct(ArticlesRepository $article)
     {
-        $this->article=$article;
+        $this->article = $article;
     }
 
     /**
@@ -38,10 +38,11 @@ class ArticlesController extends Controller
      * @param $id
      * @return mixed
      */
-    public function singlearticle($id){
-        $result= $this->article->Byid($id);
-        $result->author='LaravelChen';
-        $result->time=$result->updated_at->toDateString();
+    public function singlearticle($id)
+    {
+        $result = $this->article->Byid($id);
+        $result->author = 'LaravelChen';
+        $result->time = $result->updated_at->toDateString();
         return $result;
     }
 }

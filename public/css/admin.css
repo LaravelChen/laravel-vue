@@ -1,0 +1,345 @@
+* {
+    outline: none !important;
+    -moz-outline: none !important;
+    font-family: Arial, 'Hiragino Sans GB', 冬青黑, 'Microsoft YaHei', 微软雅黑, SimSun, 宋体, Helvetica, Tahoma, 'Arial sans-serif';
+}
+
+body {
+    background: none repeat scroll 0 0 #eeeeee;
+}
+
+html, body {
+    height: 100%
+}
+
+/* Content */
+#content {
+
+    margin-left: 250px;
+    margin-right: 0;
+    padding-bottom: 25px;
+    position: relative;
+    min-height: 100%;
+    width: auto;
+}
+
+#content-header {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    display: block;
+    float: left;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    z-index: 16;
+    background: #2E363F;
+}
+
+#sidebar > ul {
+    list-style: none;
+    margin: 0px 0 0;
+    padding: 0;
+    position: absolute;
+    width: 250px;
+}
+
+#sidebar > ul > li {
+    display: block;
+    position: relative;
+}
+
+#sidebar > ul > li > a {
+    padding: 10px 0 10px 15px;
+    display: block;
+    color: #939da8;
+}
+
+#sidebar > ul > li > a > i {
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+#sidebar > ul > li > a > .label {
+    margin: 0 20px 0 0;
+    float: right;
+    padding: 3px 5px 2px;
+}
+
+#sidebar > ul li ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar > ul li.open ul {
+    display: block;
+}
+
+#sidebar > ul li ul li a {
+    padding: 10px 0 10px 25px;
+    display: block;
+    color: #777777;
+}
+
+#sidebar > ul li ul li:first-child a {
+    border-top: 0;
+}
+
+#sidebar > ul li ul li:last-child a {
+    border-bottom: 0;
+}
+
+#sidebar > ul {
+    border-bottom: 1px solid #37414b
+}
+
+#sidebar > ul > li {
+    border-top: 1px solid #37414b;
+    border-bottom: 1px solid #1f262d;
+}
+
+#sidebar > ul > li.router-link-active > a {
+    background: url("../picture/menu-active.png") no-repeat scroll right center transparent !important;
+    text-decoration: none;
+}
+
+#sidebar > ul > li.router-link-active {
+    background-color: #27a9e3;
+    border-bottom: 1px solid #27a9e3;
+    border-top: 1px solid #27a9e3;
+}
+
+#sidebar > ul > li.router-link-active a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar > ul > li > a > .label {
+    background-color: #F66;
+}
+
+#sidebar > ul > li > a:hover {
+    background-color: #27a9e3;
+    color: #fff;
+}
+
+#sidebar > ul li ul {
+    background-color: #1e242b;
+}
+
+#sidebar > ul li ul li a {
+    color: #939da8
+}
+
+#sidebar > ul li ul li a:hover, #sidebar > ul li ul li.router-link-active a {
+    color: #fff;
+    background-color: #28b779;
+}
+
+.user[data-v-3dba5610] {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.user .avatar[data-v-3dba5610] {
+    width: 80px;
+    margin: 10px auto
+}
+
+.buttons a[data-v-3dba5610] {
+    display: inline-block;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 5px;
+    color: #828a9a
+}
+
+.buttons[data-v-3dba5610] {
+    height: 50px;
+    width: 250px
+}
+
+.buttons a[data-v-3dba5610]:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nickname[data-v-3dba5610] {
+    color: #fff
+}
+
+.breadcrumb {
+    padding: 15px 15px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 0;
+    width: 100%;
+    border-bottom: 2px solid #FF8C00;
+}
+
+.breadcrumb li {
+    font-size: 20px;
+}
+
+.expecial {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.i-box {
+    background-color: #fff;
+    border-color: #e7eaec;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    padding: 10px 10px;
+    border-top: 2px solid #9B30FF;
+}
+
+.i-box-font {
+    font-size: 16px;
+    color: #636b6f;
+    padding-left: 10px
+}
+
+.i-box-content {
+    border-top: 1px solid #eee9e9;
+    padding: 20px 20px;
+    font-size: 26px;
+    color: #636b6f;
+    font-weight: 500
+}
+
+.i-box-content span i {
+    padding-right: 20px
+}
+
+.table > thead > tr {
+    border-top: 1px solid #ddd
+}
+
+.table > thead > tr > th {
+    padding: 20px;
+    line-height: 1.72222;
+    vertical-align: bottom;
+    border-top: 2px solid #ddd;
+    font-size: 18px;
+    color: #636b6f
+}
+
+.table > tbody > tr {
+    border-top: 1px solid #e8e8e8
+}
+
+.table > tbody > tr:hover {
+    background: rgba(232, 232, 232, .5);
+    color: #00adb5
+}
+
+.table > tbody > tr td {
+    color: #636b6f;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis
+}
+
+.usersmember-h3 {
+    -moz-border-top-colors: none;
+    -o-border-image: none;
+    border-image: none;
+    background: #fff;
+    color: #636b6f;
+    margin-bottom: 0;
+    padding: 10px 15px 15px 15px;
+    min-height: 48px;
+}
+
+.btn-edit {
+    color: #fff;
+    background-color: #3498db;
+    border-color: #3096da;
+    border-radius: 50%;
+    padding: 9px 14px;
+    margin-right: 5px;
+    margin-left: 5px
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #e64837;
+    border-color: #e64837;
+    border-radius: 50%;
+    padding: 9px 14px;
+    margin-right: 5px;
+    margin-left: 5px
+}
+.edit{
+    margin-top: 100px;
+    padding: 0px 20px 40px 20px;
+    background: #fff;
+    border-top: 2px solid #9B30FF;
+}
+.setting {
+    background-color: #fff;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+.btn-see {
+    color: #fff;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    border-radius: 50%;
+    padding: 9px 14px;
+    margin-right: 5px;
+    margin-left: 5px
+}
+
+@media only screen and (max-width: 767px) {
+    #content {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+

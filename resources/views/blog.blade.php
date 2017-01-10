@@ -18,7 +18,7 @@
 <body>
 
 <div id="app">
-@include('vendor.ueditor.assets')
+
 </div>
 <script src="{{asset("js/app.js")}}"></script>
 </body>

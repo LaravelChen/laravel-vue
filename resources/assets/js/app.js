@@ -9,16 +9,26 @@ require('./bootstrap');
 
 import VueRouter from 'vue-router'
 import App from './App.vue'
+import Vuelidate from 'vuelidate'
 import Article from './components/Article.vue'
 import Discussion from './components/Discussion.vue'
 import ArticleShow from './components/ArticleShow.vue'
-Vue.use(VueRouter)
+import  CommentTotal from './components/Personal/CommentTotal.vue'
+import  EditComment from './components/Comment/EditComment.vue'
+import UserLove from './components/Personal/UserLove.vue'
+import  Notification from './components/Notification/notification.vue'
 
+Vue.use(Vuelidate)
+Vue.use(VueRouter)
 
 const routes = [
     { path: '/', component: Article },
     { path:'/discussion',component:Discussion},
     { path:'/article/:id',component:ArticleShow,name:'article'},
+    { path:'/commenttotal',component:CommentTotal},
+    { path:'/userlove',component:UserLove},
+    { path:'/notification',component:Notification},
+    { path:'/editcomment/:id',component:EditComment,name:'editcomment'},
 ]
 
 const router = new VueRouter({

@@ -22,7 +22,7 @@
                             <p class="blog-content">{{article.body | excerpt}}[...]</p>
                             <p>
                                 <router-link :to="{ name: 'article', params: { id: article.id }}"tag="a" class="color-grey comment"><i class="fa fa-comment-o"></i>{{article.comments_count}}条评论</router-link>
-                                <a class="color-grey"><i class="fa fa-thumbs-o-up"></i>点赞({{article.votes_count}})</a>
+                                <router-link :to="{ name: 'article', params: { id: article.id }}"tag="a" class="color-grey comment"><i class="fa fa-thumbs-o-up"></i>点赞数({{article.votes_count}})</router-link>
                                 <router-link :to="{ name: 'article', params: { id: article.id }}"tag="a" class="more-link pull-right">继续阅读 »</router-link>
                             </p>
                         </div>
@@ -49,7 +49,6 @@
             },
           mounted:function(){
              this.$http.get('/api/article').then((response)=>{
-                  console.log(response.data);
                    this.articles=response.data;
              })
           }

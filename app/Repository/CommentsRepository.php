@@ -44,4 +44,11 @@ class CommentsRepository
     public function ByArticleId($id){
        return Comment::where('article_id',$id)->get();
     }
+
+    /**
+     * @return mixed
+     */
+    public function  ByUserId(){
+        return Comment::where('user_id',\Auth::id())->get();
+    }
 }

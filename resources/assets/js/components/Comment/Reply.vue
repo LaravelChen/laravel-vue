@@ -1,6 +1,12 @@
 <template>
     <div>
-        <p><a class="reply-comment" @click="replyshow">回复</a></p>
+        <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+        <p>
+            <span><a class="reply-comment" @click="replyshow">回复</a></span>
+            <span v-if="users.id==isedit"><router-link :to="{name:'editcomment',params: { id: commentid }}" tag="a"
+                                                       class="edit-comment">编辑</router-link></span>
+        </p>
+
         <form method="POST" @submit.prevent="replysub(replyname)" accept-charset="UTF-8">
             <div v-show="reply.isreply" class="form-group">
                 <textarea v-model="reply.reply" placeholder="尽情的评论吐槽吧!" name="reply" class="form-control"
@@ -11,11 +17,13 @@
                 </div>
             </div>
         </form>
+
     </div>
 </template>
+
 <script>
     export default{
-        props:['commentlist','article','replyname'],
+        props:['commentlist','article','replyname','isedit','users','commentid'],
         data(){
            return {
                reply:{
@@ -49,6 +57,10 @@
            },
         }
     }
+
+
+
+
 
 
 </script>
