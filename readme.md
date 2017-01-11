@@ -1,40 +1,75 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# About Laravel-Vue
+##项目介绍
+####1.采用Laravel5.3和Vue2.0完成的SPA应用，本项目主要是个人网站.
+####2.包括文章的发布，修改，删除，评论，回复，站内通信等功能.
+####3.本人采用的是Mac下面的valet的开发环境,比较方便.
 
-## About Laravel
+##环境要求
+>####最好搭建了homestead或者vlate环境，windows的XAMPP之类的集成环境出现错误的自己负责，很有可能是路劲的问题......
+##安装步骤
+###1.将项目拷贝到本地
+```
+git clone https://github.com/LaravelChen/laravel-vue.git
+```
+###2.进入目录
+```
+cd laravel-vue
+```
+###3.赋予一些文件夹的权限
+```
+sudo chmod -R 777 storage bootstrap public  //根据自己的环境自己决定是否执行本命令
+```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+###4.配置文件
+####将目录下的```.env.example```的内容拷贝到```.env```文件，不过这个  ```.env```文件单独创建.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+###5.生成相应的依赖
+```
+composer install
+```
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+###6.安装前端依赖
+#####安装 Gulp
 
-## Learning Laravel
+```
+npm install --global gulp
+```
+####或者你可以使用 yarn 代替 npm 节省下载安装时间：
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+```
+yarn add global gulp
+```
+####安装 Laravel Elixir 和 Vuejs 的依赖:
+````
+npm install
+```
+####或者
+```
+yarn
+```
+###7.编译
+####你可以单次编译：
+```
+gulp
+```
+####或者你可以监控资源文件修改：
+```
+gulp watch
+```
+####当然，你也可以运行所有任务并压缩所有 CSS 及 JavaScript：
+```
+gulp --production
+```
+###8.生成数据
+```
+ php artisan create:data
+```
+####会生成响应的用户和文章
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+###9.创建管理员
+```
+php artisan blog:admin   //按照提示一步步创建您的管理员信息
+```
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+###10.最后希望您能完美的创建成功
