@@ -40,6 +40,6 @@ class CreateData extends Command
         $this->call('key:generate');
         $this->call('migrate');
         $this->call('db:seed');
-        $this->line('恭喜您，数据创建完毕!哈哈!');
+        $this->info('恭喜您，数据创建完毕!哈哈!');
     }
 }
