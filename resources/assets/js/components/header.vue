@@ -40,7 +40,7 @@
                             <li>
                                 <router-link to="/userlove" tag="a">我的收藏</router-link>
                             </li>
-                            <li>
+                            <li v-if="users.is_admin">
                                <a href="/admin">管理后台</a>
                             </li>
                             <li>

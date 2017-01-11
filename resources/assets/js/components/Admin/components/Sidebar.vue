@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </li>
-            <router-link   tag="li" to="/admin">
+            <router-link tag="li" to="/admin">
                 <a><i class="fa fa-home"></i>Dashboard</a>
             </router-link>
             <router-link  tag="li" to="/users">
