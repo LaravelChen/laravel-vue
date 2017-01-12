@@ -14,14 +14,14 @@ use \Hash;
 
 class MyCommand
 {
-    public function createadmin($name,$password,$email){
+    public function createadmin($data){
        return User::create([
-            'name'=>$name,
-            'password'=>Hash::make($password),
-            'email'=>$email,
+            'name'=>$data['name'],
+            'password'=>$data['password'],
+            'email'=>$data['email'],
             'avatar'=>'picture/default.png',
             'is_admin'=>1,
-            'remember_token' => str_random(10),
+            'remember_token' => str_random(40),
         ]);
     }
 }
