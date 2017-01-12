@@ -41,7 +41,7 @@
         methods:{
             editsub(){
                this.$http.post('api/editcommentupdate/'+this.$route.params.id,{'body':this.comment}).then((response)=>{
-                   this.$router.push('article/'+this.$route.params.id);
+                   this.$router.push('/article/'+response.data.article_id);
                })
             }
         }

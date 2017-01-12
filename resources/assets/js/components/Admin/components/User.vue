@@ -11,31 +11,37 @@
                         All Users
                     </h3>
                 </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Avatar</th>
-                        <th>Name</th>
-                        <th>Eamil</th>
-                        <th>Created_time</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(user,index) in users">
-                        <td style="padding-left:20px">{{user.id}}</td>
-                        <td style="padding-left:20px"><img class="img-circle" width="40px" height="40px" v-bind:src="user.avatar"></td>
-                        <td>{{user.name}}</td>
-                        <td>{{user.email}}</td>
-                        <td>{{user.created_at}}</td>
-                        <td>
-                            <router-link  :to="{ name: 'edituser', params: { id: user.id }}" class="btn btn-edit" tag="a" ><i class="fa fa-pencil"></i></router-link>
-                            <a v-on:click="deleteuser(index,user.id)" class="btn btn-delete"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <paginate :per="10" name="users" :list="users" class="paginate-list">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Avatar</th>
+                            <th>Name</th>
+                            <th>Eamil</th>
+                            <th>Created_time</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="(user,index) in paginated('users')">
+                            <td style="padding-left:20px">{{user.id}}</td>
+                            <td style="padding-left:20px"><img class="img-circle" width="40px" height="40px"
+                                                               v-bind:src="user.avatar"></td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.created_at}}</td>
+                            <td>
+                                <router-link :to="{ name: 'edituser', params: { id: user.id }}" class="btn btn-edit"
+                                             tag="a"><i class="fa fa-pencil"></i></router-link>
+                                <a v-on:click="deleteuser(index,user.id)" class="btn btn-delete"><i
+                                        class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </paginate>
+                <paginate-links for="users" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
             </div>
         </div>
     </div>
@@ -48,6 +54,7 @@ import toastroption from './js/options.js'
         data(){
             return {
                 users:[],
+                paginate: ['users'],
             }
         },
         mounted(){
@@ -65,4 +72,7 @@ import toastroption from './js/options.js'
             },
         },
     }
+
+
+
 </script>

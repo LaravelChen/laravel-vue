@@ -101,6 +101,6 @@ class CommentsController extends Controller
         $result->update([
             'body'=>$request->get('body')
         ]);
-        return ['success'=>'true'];
+        return ['article_id'=>$result->article_id];
     }
 }

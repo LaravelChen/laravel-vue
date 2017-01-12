@@ -17,9 +17,12 @@ import  CommentTotal from './components/Personal/CommentTotal.vue'
 import  EditComment from './components/Comment/EditComment.vue'
 import UserLove from './components/Personal/UserLove.vue'
 import  Notification from './components/Notification/notification.vue'
+import VuePaginate from 'vue-paginate'
+
 
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
+Vue.use(VuePaginate)
 
 const routes = [
     { path: '/', component: Article },

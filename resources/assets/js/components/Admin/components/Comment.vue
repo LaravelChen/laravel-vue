@@ -11,6 +11,7 @@
                         All Comments
                     </h3>
                 </div>
+                <paginate :per="10" name="comments" :list="comments" class="paginate-list">
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
@@ -22,7 +23,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="(comment,index) in comments">
+                    <tr v-for="(comment,index) in paginated('comments')">
                         <td style="padding-left:20px">{{comment.id}}</td>
                         <td style="padding-left:20px">{{comment.name}}</td>
                         <td>{{comment.body | excerpt}}</td>
@@ -36,6 +37,8 @@
                     </tr>
                     </tbody>
                 </table>
+                </paginate>
+                <paginate-links for="comments" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
             </div>
         </div>
     </div>
@@ -48,6 +51,7 @@ import toastroption from './js/options.js'
         data(){
             return{
                 comments:[],
+                paginate: ['comments'],
             }
         },
         filters: {

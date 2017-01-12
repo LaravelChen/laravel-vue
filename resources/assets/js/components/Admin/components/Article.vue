@@ -12,29 +12,33 @@
                         <router-link to="createarticle" tag="a" class="btn btn-success pull-right">Create</router-link>
                     </h3>
                 </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Title</th>
-                        <th>Published At</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(article,index) in articles">
-                        <td style="padding-left:20px">{{article.id}}</td>
-                        <td>{{article.title}}</td>
-                        <td>{{article.created_at}}</td>
-                        <td>
-                            <router-link :to="{ name: 'editarticle', params: { id: article.id }}" class="btn btn-edit"
-                                         tag="a"><i class="fa fa-pencil"></i></router-link>
-                            <a @click="deletearticle(index,article.id)"
-                               class="btn btn-delete"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <paginate :per="10" name="articles" :list="articles" class="paginate-list">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Published At</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="(article,index) in paginated('articles')">
+                            <td style="padding-left:20px">{{article.id}}</td>
+                            <td>{{article.title}}</td>
+                            <td>{{article.created_at}}</td>
+                            <td>
+                                <router-link :to="{ name: 'editarticle', params: { id: article.id }}"
+                                             class="btn btn-edit"
+                                             tag="a"><i class="fa fa-pencil"></i></router-link>
+                                <a @click="deletearticle(index,article.id)"
+                                   class="btn btn-delete"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </paginate>
+                <paginate-links for="articles" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
             </div>
         </div>
     </div>
@@ -47,6 +51,7 @@ import toastroption from './js/options.js'
         data(){
             return{
                 articles:[],
+                paginate: ['articles']
             }
         },
         mounted(){
@@ -64,4 +69,5 @@ import toastroption from './js/options.js'
             }
         }
     }
+
 </script>

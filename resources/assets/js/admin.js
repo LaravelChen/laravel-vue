@@ -18,7 +18,9 @@ import EditUser from  './components/Admin/components/Edit/EditUser.vue'
 import EditComment from  './components/Admin/components/Edit/EditComment.vue'
 import  CreateArticle from './components/Admin/components/Create/CreateArticle.vue'
 import EditArticle from './components/Admin/components/Edit/EditArticle.vue'
+import VuePaginate from 'vue-paginate'
 
+Vue.use(VuePaginate)
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
 

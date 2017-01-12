@@ -318,6 +318,39 @@ a:focus {
     margin-right: 5px;
     margin-left: 5px
 }
+.paginate-links{
+    overflow: hidden;
+    text-align: center;
+    list-style: none;
+    height:auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.paginate-links li {
+    display: block;
+    float: left;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.paginate-links .active{
+    background: #FF7F24;
+    border: 1px solid #FF7F24;
+}
+.paginate-links .ellipses{
+    border: none;
+}
+.paginate-links .active a{
+    color: #fff;
+}
+
+.paginate-links li:hover a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.paginate-links li a{
+    padding: 10px 10px;
+    font-size: 20px;
+}
 
 @media only screen and (max-width: 767px) {
     #content {

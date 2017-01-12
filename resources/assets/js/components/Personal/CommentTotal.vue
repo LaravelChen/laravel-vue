@@ -5,7 +5,7 @@
                 <div class="jumbotron text-center">
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1"><h1 data-v-06a33fa2=""> This is CommentTotal Page.</h1>
-                            <h3 data-v-06a33fa2="">欢迎加入LaravelChen讨论群</h3></div>
+                            <h3 data-v-06a33fa2="">One World,One Laravel!</h3></div>
                     </div>
                 </div>
             </div>
