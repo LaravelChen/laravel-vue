@@ -4,7 +4,7 @@
 ![image](https://github.com/LaravelChen/laravel-vue/raw/master/public/picture/laravelvue.png)
 
 ##项目介绍
-####1.采用Laravel5.3和Vue2.0完成的SPA应用，本项目主要是个人网站.
+####1.采用Laravel5.3和Vue2.0完成的SPA应用，本项目主要采用Vue,Vue-router,Vuex以及一些动画插件.
 ####2.包括文章的发布，修改，删除，评论，回复，站内通信等功能.
 ####3.本人采用的是Mac下面的valet的开发环境,比较方便.
 
