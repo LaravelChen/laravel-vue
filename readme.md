@@ -1,7 +1,7 @@
 
 # About Laravel-Vue
 #效果图
-![image](https://photo.laravelchen.cn/githublaravelvue.png)
+![image](https://github.com/LaravelChen/laravel-vue/raw/master/public/picture/laravelvue.png)
 
 ##项目介绍
 ####1.采用Laravel5.3和Vue2.0完成的SPA应用，本项目主要是个人网站.
