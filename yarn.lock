@@ -2596,6 +2596,10 @@ multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
+muse-ui:
+  version "2.0.0-rc.2"
+  resolved "http://registry.npm.taobao.org/muse-ui/download/muse-ui-2.0.0-rc.2.tgz#9e16eb8cbdf2486e8400d2a9c028636b3fb3c84f"
+
 nan@^2.3.0, nan@^2.3.2:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.5.0.tgz#aa8f1e34531d807e9e27755b234b4a6ec0c152a8"
@@ -4169,9 +4173,19 @@ vue-loader@^9.3.2:
     vue-template-compiler "^2.0.5"
     vue-template-es2015-compiler "^1.2.2"
 
+vue-paginate@^3.3.1:
+  version "3.3.1"
+  resolved "http://registry.npm.taobao.org/vue-paginate/download/vue-paginate-3.3.1.tgz#f9bcc4c6e6cf2f980f944b35c34375f42b3ac91e"
+  dependencies:
+    vue "^2.0.5"
+
 vue-resource@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
+
+vue-router@^2.1.1:
+  version "2.1.1"
+  resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-2.1.1.tgz#10c31bbdcb6da92bd3e0223fa12345e73018625a"
 
 vue-style-loader@^1.0.0:
   version "1.0.0"
@@ -4190,9 +4204,13 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.4.2.tgz#0bc595cda68fc27779568926fcead13553a335df"
 
-vue@^2.0.1:
+vue@^2.0.1, vue@^2.0.5:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.1.8.tgz#ae30aa86024fccf5535292ce414e7b4c221a1756"
+
+vuelidate@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/vuelidate/download/vuelidate-0.2.0.tgz#7c50b220ef3700b1a28900f32825c442df809337"
 
 watchpack@^0.2.1:
   version "0.2.9"

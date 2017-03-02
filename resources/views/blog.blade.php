@@ -9,6 +9,8 @@
     <link href="{{asset('./css/app.css')}}"rel="stylesheet">
     <link href="{{asset('./css/navbar.css')}}" rel="stylesheet">
     <link href="{{asset('./css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('./css/toastr.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./css/element.css')}}" rel="stylesheet">
 </head>
 <script>
     window.Laravel = <?php echo json_encode([
@@ -21,5 +23,6 @@
 
 </div>
 <script src="{{asset("js/app.js")}}"></script>
+<script src="{{asset("js/element.js")}}"></script>
 </body>
 </html>

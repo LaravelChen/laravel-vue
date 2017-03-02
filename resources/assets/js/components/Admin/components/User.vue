@@ -41,7 +41,7 @@
                         </tbody>
                     </table>
                 </paginate>
-                <paginate-links for="users" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
+                <paginate-links v-if="users.length>10" for="users" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
             </div>
         </div>
     </div>

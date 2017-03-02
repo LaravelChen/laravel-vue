@@ -20,6 +20,7 @@ import  CreateArticle from './components/Admin/components/Create/CreateArticle.v
 import EditArticle from './components/Admin/components/Edit/EditArticle.vue'
 import VuePaginate from 'vue-paginate'
 
+
 Vue.use(VuePaginate)
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
@@ -48,8 +49,8 @@ const router = new VueRouter({
  */
 //
 //Vue.component('Header', require('./components/header.vue'));
-const app = new Vue({
-    el: '#app',
+const admin = new Vue({
+    el: '#admin',
     template: '<Admin/>',
     components: {Admin},
     router,

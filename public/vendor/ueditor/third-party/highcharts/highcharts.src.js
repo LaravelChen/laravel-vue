@@ -1535,7 +1535,7 @@ defaultOptions = {
 		//spacingBottom: 15,
 		//spacingLeft: 10,
 		style: {
-			fontFamily: '"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif', // default font
+			fontFamily: '"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif', // default fonts
 			fontSize: '12px'
 		},
 		backgroundColor: '#FFFFFF',
@@ -1670,7 +1670,7 @@ defaultOptions = {
 	labels: {
 		//items: [],
 		style: {
-			//font: defaultFont,
+			//fonts: defaultFont,
 			position: ABSOLUTE,
 			color: '#3E576F'
 		}
@@ -1766,7 +1766,7 @@ defaultOptions = {
 			year: '%Y'
 		},
 		//formatter: defaultFormatter,
-		headerFormat: '<span style="font-size: 10px">{point.key}</span><br/>',
+		headerFormat: '<span style="fonts-size: 10px">{point.key}</span><br/>',
 		pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
 		shadow: true,
 		//shared: false,
@@ -3238,8 +3238,8 @@ SVGRenderer.prototype = {
 			renderer = this,
 			forExport = renderer.forExport,
 			lines = pick(wrapper.textStr, '').toString()
-				.replace(/<(b|strong)>/g, '<span style="font-weight:bold">')
-				.replace(/<(i|em)>/g, '<span style="font-style:italic">')
+				.replace(/<(b|strong)>/g, '<span style="fonts-weight:bold">')
+				.replace(/<(i|em)>/g, '<span style="fonts-style:italic">')
 				.replace(/<a/g, '<span')
 				.replace(/<\/(b|strong|i|em|a)>/g, '</span>')
 				.split(/<br.*?>/g),
@@ -3314,7 +3314,7 @@ SVGRenderer.prototype = {
 								css(tspan, { display: 'block' });
 							}
 
-							// Set the line height based on the font size of either
+							// Set the line height based on the fonts size of either
 							// the text element or the tspan element
 							attr(
 								tspan,
@@ -4210,13 +4210,13 @@ SVGRenderer.prototype = {
 	},
 
 	/**
-	 * Utility to return the baseline offset and total line height from the font size
+	 * Utility to return the baseline offset and total line height from the fonts size
 	 */
 	fontMetrics: function (fontSize) {
 		fontSize = pInt(fontSize || 11);
 
-		// Empirical values found by comparing font size and bounding box height.
-		// Applies to the default font family. http://jsfiddle.net/highcharts/7xvn7/
+		// Empirical values found by comparing fonts size and bounding box height.
+		// Applies to the default fonts family. http://jsfiddle.net/highcharts/7xvn7/
 		var lineHeight = fontSize < 24 ? fontSize + 4 : mathRound(fontSize * 1.2),
 			baseline = mathRound(lineHeight * 0.8);
 
@@ -6533,7 +6533,7 @@ Axis.prototype = {
 			//side: 'outside',
 			style: {
 				color: '#4d759e',
-				//font: defaultFont.replace('normal', 'bold')
+				//fonts: defaultFont.replace('normal', 'bold')
 				fontWeight: 'bold'
 			}
 			//x: 0,
@@ -16035,7 +16035,7 @@ seriesTypes.bar = BarSeries;
 defaultPlotOptions.scatter = merge(defaultSeriesOptions, {
 	lineWidth: 0,
 	tooltip: {
-		headerFormat: '<span style="font-size: 10px; color:{series.color}">{series.name}</span><br/>',
+		headerFormat: '<span style="fonts-size: 10px; color:{series.color}">{series.name}</span><br/>',
 		pointFormat: 'x: <b>{point.x}</b><br/>y: <b>{point.y}</b><br/>',
 		followPointer: true
 	},

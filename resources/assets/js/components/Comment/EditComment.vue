@@ -10,7 +10,6 @@
                                 <label  class="control-label">Comment:</label>
                                 <textarea style="font-size:15px" v-model="comment" rows="10" class="form-control" required="required"></textarea>
                             </div>
-
                             <div class="form-group">
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <button type="submit" class="btn btn-success form-control">

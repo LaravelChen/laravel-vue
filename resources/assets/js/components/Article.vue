@@ -30,14 +30,17 @@
                                     <router-link :to="{ name: 'article', params: { id: article.id }}" tag="a"
                                                  class="color-grey comment"><i class="fa fa-thumbs-o-up"></i>点赞数({{article.votes_count}})
                                     </router-link>
-                                    <router-link :to="{ name: 'article', params: { id: article.id }}" tag="a"
-                                                 class="more-link pull-right">继续阅读 »
-                                    </router-link>
+                                    <el-tooltip class="pull-right" content="继续阅读" placement="top">
+                                        <router-link :to="{ name: 'article', params: { id: article.id }}" tag="a"
+                                                     class="more-link pull-right">继续阅读 »
+                                        </router-link>
+                                    </el-tooltip>
                                 </p>
                             </div>
                         </article>
                     </paginate>
-                    <paginate-links for="articles" class="col-md-6 col-md-offset-3" :limit="5"></paginate-links>
+                    <paginate-links v-if="articles.length>10" for="articles" class="col-md-6 col-md-offset-3"
+                                    :limit="5"></paginate-links>
                 </div>
             </div>
         </div>
@@ -66,6 +69,7 @@
              })
           }
     }
+
 
 
 

@@ -1076,11 +1076,11 @@ if(!Array.prototype.indexOf){
 				if (this.style('stroke-linejoin').hasValue()) ctx.lineJoin = this.style('stroke-linejoin').value;
 				if (this.style('stroke-miterlimit').hasValue()) ctx.miterLimit = this.style('stroke-miterlimit').value;
 
-				// font
+				// fonts
 				if (typeof(ctx.font) != 'undefined') {
 					ctx.font = svg.Font.CreateFont( 
-						this.style('font-style').value, 
-						this.style('font-variant').value, 
+						this.style('fonts-style').value,
+						this.style('fonts-variant').value,
 						this.style('font-weight').value, 
 						this.style('font-size').hasValue() ? this.style('font-size').Length.toPixels() + 'px' : '', 
 						this.style('font-family').value).toString();
@@ -2024,7 +2024,7 @@ if(!Array.prototype.indexOf){
 		}
 		svg.Element.animateTransform.prototype = new svg.Element.animate;
 		
-		// font element
+		// fonts element
 		svg.Element.font = function(node) {
 			this.base = svg.Element.ElementBase;
 			this.base(node);
@@ -2038,7 +2038,7 @@ if(!Array.prototype.indexOf){
 			this.glyphs = [];			
 			for (var i=0; i<this.children.length; i++) {
 				var child = this.children[i];
-				if (child.type == 'font-face') {
+				if (child.type == 'fonts-face') {
 					this.fontFace = child;
 					if (child.style('font-family').hasValue()) {
 						svg.Definitions[child.style('font-family').value] = this;
@@ -2060,7 +2060,7 @@ if(!Array.prototype.indexOf){
 		}
 		svg.Element.font.prototype = new svg.Element.ElementBase;
 		
-		// font-face element
+		// fonts-face element
 		svg.Element.fontface = function(node) {
 			this.base = svg.Element.ElementBase;
 			this.base(node);	
@@ -2189,7 +2189,7 @@ if(!Array.prototype.indexOf){
 				var customFont = this.parent.style('font-family').Definition.getDefinition();
 				if (customFont != null) {
 					var fontSize = this.parent.style('font-size').numValueOrDefault(svg.Font.Parse(svg.ctx.font).fontSize);
-					var fontStyle = this.parent.style('font-style').valueOrDefault(svg.Font.Parse(svg.ctx.font).fontStyle);
+					var fontStyle = this.parent.style('fonts-style').valueOrDefault(svg.Font.Parse(svg.ctx.font).fontStyle);
 					var text = this.getText();
 					if (customFont.isRTL) text = text.split("").reverse().join("");
 					
@@ -2434,7 +2434,7 @@ if(!Array.prototype.indexOf){
 								}
 							}
 							svg.Styles[cssClass] = props;
-							if (cssClass == '@font-face') {
+							if (cssClass == '@fonts-face') {
 								var fontFamily = props['font-family'].value.replace(/"/g,'');
 								var srcs = props['src'].value.split(',');
 								for (var s=0; s<srcs.length; s++) {

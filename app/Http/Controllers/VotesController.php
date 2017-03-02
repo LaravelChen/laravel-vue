@@ -29,7 +29,7 @@ class VotesController extends Controller
         $this->thumb->AddandDe($request->get('article_id'));
         return [
             'count' => $this->thumb->ByArticleVoteCount($request->get('article_id')),
-            'font' => $this->thumb->votefont($request->get('article_id')),
+            'fonts' => $this->thumb->votefont($request->get('article_id')),
         ];
     }
 
@@ -41,7 +41,7 @@ class VotesController extends Controller
     {
         return [
             'count' => $this->thumb->ByArticleVoteCount($request->get('article_id')),
-            'font' => $this->thumb->votefont($request->get('article_id')),
+            'fonts' => $this->thumb->votefont($request->get('article_id')),
         ];
     }
 }

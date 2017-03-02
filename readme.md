@@ -1,5 +1,8 @@
 
 # About Laravel-Vue
+#效果图
+![image](https://photo.laravelchen.cn/githublaravel-vue.png)
+
 ##项目介绍
 ####1.采用Laravel5.3和Vue2.0完成的SPA应用，本项目主要是个人网站.
 ####2.包括文章的发布，修改，删除，评论，回复，站内通信等功能.

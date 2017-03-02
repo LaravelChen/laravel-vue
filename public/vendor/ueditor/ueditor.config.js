@@ -223,8 +223,8 @@
         //,'customstyle':[
         //    {tag:'h1', name:'tc', label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;text-align:center;margin:0 0 20px 0;'},
         //    {tag:'h1', name:'tl',label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;margin:0 0 10px 0;'},
-        //    {tag:'span',name:'im', label:'', style:'font-style:italic;font-weight:bold'},
-        //    {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
+        //    {tag:'span',name:'im', label:'', style:'fonts-style:italic;fonts-weight:bold'},
+        //    {tag:'span',name:'hi', label:'', style:'fonts-style:italic;fonts-weight:bold;color:rgb(51, 153, 204)'}
         //]
 
         //打开右键菜单功能
@@ -265,7 +265,7 @@
         //removeFormat
         //清除格式时可以删除的标签和属性
         //removeForamtTags标签
-        //,removeFormatTags:'b,big,code,del,dfn,em,font,i,ins,kbd,q,samp,small,span,strike,strong,sub,sup,tt,u,var'
+        //,removeFormatTags:'b,big,code,del,dfn,em,fonts,i,ins,kbd,q,samp,small,span,strike,strong,sub,sup,tt,u,var'
         //removeFormatAttributes属性
         //,removeFormatAttributes:'class,style,lang,width,height,align,hspace,valign'
 

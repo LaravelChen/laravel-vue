@@ -9,6 +9,8 @@
     <link href="{{asset('./css/app.css')}}" rel="stylesheet">
     <link href="{{asset('./css/admin.css')}}" rel="stylesheet">
     <link href="{{asset('./css/toastr.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./css/element.css')}}" rel="stylesheet">
+
 </head>
 <script>
     window.Laravel = <?php echo json_encode([
@@ -16,9 +18,10 @@
     ]); ?>
 </script>
 <body>
-<div id="app" >
+<div id="admin" >
     @include('vendor.ueditor.assets')
 </div>
 <script src="{{asset("js/admin.js")}}"></script>
+<script src="{{asset("js/element.js")}}"></script>
 </body>
 </html>
